@@ -17,8 +17,6 @@ SYNTAX  | DEFINITION
 {1,2}  | one to two times.
 )  | You guessed it - Closes the group.
 $  | Assert position at end of the string
-
-
-![]()
+![visual](https://raw.githubusercontent.com/IamGiel/notes/master/images/regex%20visual.png)
 
 
