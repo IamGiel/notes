@@ -1,4 +1,33 @@
+// var password = function (pin) {
+//     // const lowerCasePin = pin.toLowerCase();
+//     // const pinArr = lowerCasePin.split();
+//     // const pw = $("#passWord").val().trim();
+//     //const pin = pw;
 
+
+//     console.log(pin);
+//     console.log("pin length", pin.length)
+
+
+//     if ((pin.length >= 4) && (pin.length <= 6)) {
+//         console.log("good not less than 4, not over 6");
+
+//         return true;
+//     } else if (pin.length > 6) {
+//         console.log("too much");
+
+//     } else if (pin.length < 3) {
+//         console.log("a little more please");
+
+//     }
+
+// };
+
+// password("123");
+
+
+
+//==================
 $(document).ready(function () {
     //testing for connection to html file
     console.log("nice, js file is linked.");
@@ -30,12 +59,16 @@ $(document).ready(function () {
         } else if (pin.length > 6) {
             console.log("too much");
             alert("too much");
+            return false;
         } else if (pin.length < 3) {
             console.log("a little more please");
             alert("a little more please");
-        } else if (pin.indexOf('@') !== 1) {
-             alert('cant use @'); 
-            };
+            return false;
+        } else if (pin.indexOf(/^[a-zA-Z]*$/) > -1) {
+            console.log("only digits please");
+            alert("only digits please");
+            return false;
+        }
 
       
             $("#passWord").val("");   
