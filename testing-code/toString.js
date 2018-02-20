@@ -14,5 +14,4 @@ var countBits = function (n) {
 };
 
 countBits(2);
-countBits(3);
-countBits(4);
+
