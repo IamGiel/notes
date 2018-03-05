@@ -1,0 +1,64 @@
+// = = = = = HERE WE USE SASS MIXIN = = = = =
+
+
+// Usage:   @include transition(width, height 0.3s ease-in-out);
+// Output:  -webkit-transition(width 0.2s, height 0.3s ease-in-out);
+//          transition(width 0.2s, height 0.3s ease-in-out);
+//
+// Pass in any number of transitions
+@mixin transition($transitions...) {
+  $unfoldedTransitions: ();
+  @each $transition in $transitions {
+    $unfoldedTransitions: append(
+      $unfoldedTransitions,
+      unfoldTransition($transition),
+      comma
+    );
+  }
+  -webkit-transition: $unfoldedTransitions;
+  transition: $unfoldedTransitions;
+}
+@function unfoldTransition($transition) {
+  // Default values
+  $property: all;
+  $duration: 0.5s;
+  $easing: null; // Browser default is ease, which is what we want
+  $delay: null; // Browser default is 0, which is what we want
+  $defaultProperties: (
+    $property,
+    $duration,
+    $easing,
+    $delay
+  );
+
+  // Grab transition properties if they exist
+  // helper function
+  $unfoldedTransition: ();
+  @for $i from 1 through length($defaultProperties) {
+    $p: null;
+    @if $i <= length($transition) {
+      $p: nth($transition, $i);
+    } @else {
+      $p: nth($defaultProperties, $i);
+    }
+    $unfoldedTransition: append($unfoldedTransition, $p);
+  }
+
+  @return $unfoldedTransition;
+}
+// MIXIN FUNCTION  - ends here //
+
+
+
+// CALL MIXIN TRANSITIONS HERE BELOW EXAMPLE:
+.menu-text {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.07em;// heres our target example `letter-spacing`
+}
+
+.menu-text:hover {
+  color: #e7e7e7;
+  letter-spacing:1em;
+  @include transition(letter-spacing 1s ease-in-out); //calling transition here
+}
