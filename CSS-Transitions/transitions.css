@@ -1,0 +1,26 @@
+#box1 {
+  background: url("../images/planets");
+  color: white;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 16% 48%;
+  -webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
+  transition: height 1s;
+  -moz-transition: height 1s; /* For Mozilla 3.1 to 6.0 */
+  transition: height 1s;
+  -ms-transition: height 1s; /* For Microsoft 3.1 to 6.0 */
+  transition: height 1s;
+}
+#box1:hover {
+  height: 40%;
+}
+
+/*
+Here we have a div ID box1.
+We declare transitions property for height.
+We then create `#box1:hover` and declare the change
+that we want to happen.
+
+In the example above the original height
+will change within 1 second duration to 40%.
+*/
