@@ -20,3 +20,8 @@ $  | Assert position at end of the string
 ![visual](https://raw.githubusercontent.com/IamGiel/notes/master/images/regex%20visual.png)
 
 
+<h1>ZSH NOTES</h1>
+<ul>
+  <li>Themes: http://ohmyz.sh/ </li>
+  <li>Change its colors and and styles code: https://github.com/robbyrussell/oh-my-zsh/wiki/Customization</li>
+</ul>
