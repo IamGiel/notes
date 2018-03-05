@@ -4,6 +4,10 @@ Important Finds = Nice To Keep
 
 ### To untrack DS_Store from git
 `find. - name.DS_Store - print0 | xargs - 0 git rm - f--ignore - unmatch`
+
+### It possible to have files pushed to Github and be un-tracked
+<h4>Read SO solution here:</h4>
+`https://stackoverflow.com/questions/4161022/how-to-track-untracked-content`
 ### To remove file from git and keep it on Disk
 `git rm -r --cached path_to_your_folder/`
 ### Automatically get rid of remote branches that no longer exist on the remote.
@@ -25,3 +29,4 @@ $  | Assert position at end of the string
   <li>Themes: http://ohmyz.sh/ </li>
   <li>Change its colors and and styles code: https://github.com/robbyrussell/oh-my-zsh/wiki/Customization</li>
 </ul>
+
