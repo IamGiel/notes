@@ -44,14 +44,8 @@ $  | Assert position at end of the string
 
 <hr>
 
-<style>
-#example3 {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px red;
-}
-</style>
-
 <h2>Adding Video to a page</h2>
-<embed id="example3"> hello </embed>
+<div class="container">
+  <p>Hello</p>
+</div>
 
