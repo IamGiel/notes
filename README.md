@@ -30,9 +30,17 @@ $  | Assert position at end of the string
 ![visual](https://raw.githubusercontent.com/IamGiel/notes/master/images/regex%20visual.png)
 
 
-<h1>ZSH NOTES</h1>
+<h2>ZSH NOTES</h2>
 <ul>
   <li>Themes: http://ohmyz.sh/ </li>
   <li>Change its colors and and styles code: https://github.com/robbyrussell/oh-my-zsh/wiki/Customization</li>
 </ul>
+
+<hr>
+
+<h2>Javascript Asynchronous Method Comparison: Callbacks, Promises, Async/Await, & Generators</h2>
+
+<p>Read more <a href="https://medium.com/@jamil.lawrence/javascript-asynchronous-method-comparison-callbacks-promises-async-await-generators-e689d579aba7">here.</a></p>
+
+<hr>
 
