@@ -1,0 +1,41 @@
+
+@Component({
+
+})
+-------
+@Component({
+  animation:[]
+})
+-------
+@Component({
+  animation:[
+    trigger('',[])
+  ]
+})
+-------
+@Component({
+  animation:[
+    trigger('fade-in', [
+      state(...)
+      transition (...)
+    ])
+  ]
+})
+-------
+@Component({
+  selector: 'pop-over',
+  templateUrl: './pop-over.component.html',
+  styleUrls: ['./pop-over.component.scss'],
+  animations: [
+    trigger('popOverState', [
+      state('show', style({ //heres the state
+        opacity: 1
+      })),
+      state('hide',   style({
+        opacity: 0
+      })),
+      transition('show => hide', animate('600ms ease-out')), //heres the transition
+      transition('hide => show', animate('1000ms ease-in'))
+    ])
+  ]
+})
