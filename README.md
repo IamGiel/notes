@@ -48,7 +48,7 @@ Important Finds = Nice To Keep
 
 <h2>Adding Video to a page</h2>
 
-```
+
 
  ``` //start video styles
 
@@ -96,3 +96,7 @@ display: none;
 }
 }
 ```
+
+<hr>
+<h2>Adding an existing project to GitHub using the command line: <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a></h2>
+<hr><br>
