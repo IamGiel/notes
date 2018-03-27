@@ -1,0 +1,21 @@
+
+
+<h1>{{ title }}</h1>
+<p>Welcome to {{ title }}</p>
+{{#if condition }}
+{{slogan}}
+{{else}}
+...nope.
+{{/if }}
+
+<hr>
+<h4>Loop an array here: </h4> <br>
+{{#each attrArray as |val key| }}
+  {{ key }}: {{ val }}
+{{/each}}
+<hr>
+<form action="/test/submit" method="POST">
+  <label for="name">Name</label>
+  <input type="text" name="id">
+  <button type="submit">Submit</button>
+</form>
