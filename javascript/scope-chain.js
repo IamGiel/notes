@@ -6,14 +6,14 @@
 
 //the scope chain is define the way the program is written in a file
 
-// function foo(){
-//   console.log(myVar);
-// }
-// function goo() {
-//   var myVar = 1;
-//   foo();
-// }
-// goo();//myVar is not defined!
+function foo(){
+  console.log(myVar);
+}
+function goo() {
+  var myVar = 1;
+  foo();
+}
+goo();//myVar is not defined!
 
 //this is because javascript follows a lexical program
 //which means codes are executed the way they are written on the page/file
