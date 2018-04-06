@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- `ng-app` allows angular to recognize this html file as an angular application   -->
+<html ng-app>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Binding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <!-- <script src="main.js"></script> -->
+</head>
+
+<!-- ng directives at work! -->
+
+<body style="background: {{color}}">
+  <!-- `ng-model` is a directive -->
+  <input type="text" ng-model="yourName" placeholder="Enter your name.">
+  <h1>{{yourName}}</h1>
+  <input type="text" ng-model="color" placeholder="Select a color">
+
+  <!-- `ng-init` allows for initializing data -->
+  <div ng-init="bucketList=['Swim with sharks', 'Sky jump from a plane', 'Backpacking in China']">
+    <p>Your Bucket List: </p>
+  </div>
+
+  <!-- `ng-repeat` allows to loop and iterate through an array -->
+  <ul ng-repeat="item in bucketList">
+    <li>{{item}}</li>
+  </ul>
+
+  <!-- ng-init examples -->
+  <div ng-init="userData=
+  [
+  {
+    firstName: 'Gel',
+    lastName: 'DeAsis',
+    email:'gel@mailer.com',
+    password:'secretKey'
+  },
+  {
+    firstName: 'Mike',
+    lastName: 'Ashe',
+    email:'mike@mailer.com',
+    password:'secretKey'
+  }
+  ]">User Data
+  </div>
+  <ul ng-repeat="item in userData">
+    <li>
+      {{item.firstName}} {{item.lastName}} {{item.email}}
+      <hr>
+    </li>
+  </ul>
+
+</body>
+
+</html>
+
+</html>
