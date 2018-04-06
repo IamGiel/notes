@@ -11,15 +11,24 @@
   <script src="./directory.js"></script>
   <link href="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
-
 </head>
 
 <!-- ng directives at work! -->
 
 <body style="background:{{color}}">
-  <!-- `ng-model` is a directive defining a variable -->
-  <input type="text" ng-model="yourName" placeholder="Enter your name.">
-  <h1>{{yourName}}</h1>
+
+<!-- we assign variable through `ng-model` directive
+  and call it through interpolation `{{variable name here}}` -->
+
+  <div>
+    <form action=''>
+      <input type="text" placeholder="name" ng-model="yourName">
+      <br>
+      <input type="number" placeholder="age" ng-model="age">
+    </form>
+  </div>
+  <h1>Name: {{yourName}}</h1>
+  <h1>Age: {{age}}</h1>
   <input type="text" ng-model="color" placeholder="Select a color">
 
   <!-- `ng-init` allows for initializing data -->
@@ -45,7 +54,6 @@
       </li>
     </ul>
   </div>
-
 
 </body>
 
