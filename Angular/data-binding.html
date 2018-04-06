@@ -15,26 +15,26 @@
 
 <!-- ng directives at work! -->
 
-<body style="background:{{color}}" ng-controller="directoryController">
+<body style="background:{{color}}" ng-controller="directoryController as dirList">
 
 <!-- we assign variable through `ng-model` directive
   and call it through interpolation `{{variable name here}}` -->
 
   <div>
-    <form ng-submit='addPerson()'>
-      <input type="text" placeholder="name" ng-model="firstName">
+    <form ng-submit='dirList.addPerson()'>
+      <input type="text" placeholder="name" ng-model="dirList.firstName">
       <br>
-      <input type="text" placeholder="skill" ng-model="skill">
+      <input type="text" placeholder="skill" ng-model="dirList.skill">
       <br>
-      <input type="text" placeholder="email" ng-model="email">
+      <input type="text" placeholder="email" ng-model="dirList.email">
       <br>
       <input type="submit" value="submit">
     </form>
   </div>
   <!-- displayed user input through interpolation -->
-  <h4>Name: {{firstName}}</h4>
-  <h4>Skill: {{skill}}</h4>
-  <h4>Email: {{email}}</h4>
+  <h4>Name: {{dirList.firstName}}</h4>
+  <h4>Skill: {{dirList.skill}}</h4>
+  <h4>Email: {{dirList.email}}</h4>
   
   <!-- color -->
   <input type="text" ng-model="color" placeholder="type your favorite color">
@@ -44,7 +44,7 @@
     <input type="text" ng-model="info" placeholder="find a specific list">
     <!-- this calls the filter declared in `ng-repeat`-->
     <ul>
-      <li ng-repeat="item in userData | filter:info">
+      <li ng-repeat="item in dirList.userData | filter:info">
         {{item.firstName}}
         <br>
         {{item.skill}}
