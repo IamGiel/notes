@@ -48,7 +48,7 @@
     <input type="text" ng-model="info" placeholder="find a specific list">
     <!-- this calls the filter declared in `ng-repeat`-->
     <ul>
-      <li ng-class="{'over-thirty' : item.hitPoints > 12 }" ng-repeat="item in dirList.userData | filter:info">
+      <li ng-class="{'over-twelve' : item.hitPoints > 12, 'under-twelve' : item.hitPoints <= 12 }" ng-repeat="item in dirList.userData | filter:info">
         {{item.firstName}}
         <br> {{item.skill}}
         <br> {{item.hitPoints}}
