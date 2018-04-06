@@ -1,0 +1,12 @@
+/* html {
+  color:red;
+} */
+
+.over-thirty{
+  background-color: red;
+  color:white
+}
+.under-thirty{
+   background-color: blue;
+  color:white
+}

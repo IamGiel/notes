@@ -11,13 +11,14 @@
   <script src="./directory.js"></script>
   <link href="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <!-- ng directives at work! -->
 
 <body style="background:{{color}}" ng-controller="directoryController as dirList">
 
-<!-- we assign variable through `ng-model` directive
+  <!-- we assign variable through `ng-model` directive
   and call it through interpolation `{{variable name here}}` -->
 
   <div>
@@ -25,6 +26,8 @@
       <input type="text" placeholder="name" ng-model="dirList.firstName">
       <br>
       <input type="text" placeholder="skill" ng-model="dirList.skill">
+      <br>
+      <input type="text" placeholder="email" ng-model="dirList.hitPoints">
       <br>
       <input type="text" placeholder="email" ng-model="dirList.email">
       <br>
@@ -34,8 +37,9 @@
   <!-- displayed user input through interpolation -->
   <h4>Name: {{dirList.firstName}}</h4>
   <h4>Skill: {{dirList.skill}}</h4>
+  <h4>Hit-Points: {{dirList.hitPoints}}</h4>
   <h4>Email: {{dirList.email}}</h4>
-  
+
   <!-- color -->
   <input type="text" ng-model="color" placeholder="type your favorite color">
 
@@ -44,12 +48,11 @@
     <input type="text" ng-model="info" placeholder="find a specific list">
     <!-- this calls the filter declared in `ng-repeat`-->
     <ul>
-      <li ng-repeat="item in dirList.userData | filter:info">
+      <li ng-class="{'over-thirty' : item.hitPoints > 12 }" ng-repeat="item in dirList.userData | filter:info">
         {{item.firstName}}
-        <br>
-        {{item.skill}}
-        <br>
-        {{item.email}}
+        <br> {{item.skill}}
+        <br> {{item.hitPoints}}
+        <br> {{item.email}}
         <hr>
       </li>
     </ul>
