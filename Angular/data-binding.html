@@ -15,41 +15,41 @@
 
 <!-- ng directives at work! -->
 
-<body style="background:{{color}}">
+<body style="background:{{color}}" ng-controller="directoryController">
 
 <!-- we assign variable through `ng-model` directive
   and call it through interpolation `{{variable name here}}` -->
 
   <div>
-    <form action=''>
-      <input type="text" placeholder="name" ng-model="yourName">
+    <form ng-submit='addPerson()'>
+      <input type="text" placeholder="name" ng-model="firstName">
       <br>
-      <input type="number" placeholder="age" ng-model="age">
+      <input type="text" placeholder="skill" ng-model="skill">
+      <br>
+      <input type="text" placeholder="email" ng-model="email">
+      <br>
+      <input type="submit" value="submit">
     </form>
   </div>
-  <h1>Name: {{yourName}}</h1>
-  <h1>Age: {{age}}</h1>
-  <input type="text" ng-model="color" placeholder="Select a color">
-
-  <!-- `ng-init` allows for initializing data -->
-  <div ng-init="bucketList=['Swim with sharks', 'Sky jump from a plane', 'Backpacking in China']">
-    <p>Your Bucket List: </p>
-  </div>
-  <!-- `ng-model` this directive allows to define a variable-->
-  <input type="text" ng-model="search">
-  <!-- `ng-repeat` allows to loop and iterate through an array -->
-  <ul ng-repeat="item in bucketList | filter:search ">
-    <li>{{item}}</li>
-  </ul>
+  <!-- displayed user input through interpolation -->
+  <h4>Name: {{firstName}}</h4>
+  <h4>Skill: {{skill}}</h4>
+  <h4>Email: {{email}}</h4>
+  
+  <!-- color -->
+  <input type="text" ng-model="color" placeholder="type your favorite color">
 
   </div>
-  <div ng-controller="directoryController">
-    <input type="text" ng-model="info">
+  <div>
+    <input type="text" ng-model="info" placeholder="find a specific list">
     <!-- this calls the filter declared in `ng-repeat`-->
     <ul>
       <li ng-repeat="item in userData | filter:info">
-        {{item.firstName}} {{item.lastName}}
-        <br>{{item.email}}
+        {{item.firstName}}
+        <br>
+        {{item.skill}}
+        <br>
+        {{item.email}}
         <hr>
       </li>
     </ul>
