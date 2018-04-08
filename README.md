@@ -115,9 +115,20 @@ React = {
   - Componentization is a major plus, the fact that Angular 2 moved in this direction     is telling.
   - Multi-device. Angular, while it has Cordova, is nowhere near as versatile as React.
   - JSX makes it difficult to separate responsibility between developer and designer.
+  - NPM hell - you have to add extra packages (e.g routing, form validations)
+  - Lack of opinion on app structure can hurt if your devs are not used to designing      and maintaining large scale front-end apps. You need to have developers who are       Facebook level smart.
+  - 
 }
 Vue = {
-  -
-  -
-  -
+  - separation of template, css and javascript code is a plus++
+  - like, React, it is dependency hell
+  - es5 and es6 friendly
+  - it uses javascript, and also can use typescript but dont have to, gives  
+    it flexibility.
+  - router is provided by the Vue team and so no dependency needed for that purpose.
+  - But like REACT, you hav eto reply on packages (eg validations) so you may have to update.
+  - no dependency injection.
+  - has a great documentation!
+  - A con, it doesn't have a great backup like facebook or google. Alibaba uses Vue so    it may soon pick up.
+
 }
