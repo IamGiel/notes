@@ -17,6 +17,8 @@
 <!-- ng directives at work! -->
 
 <body style="background:{{color}}" ng-controller="directoryController as dirList">
+  <!-- color -->
+  <input type="text" ng-model="color" placeholder="type your favorite color">
 
   <!-- we assign variable through `ng-model` directive
   and call it through interpolation `{{variable name here}}` -->
@@ -40,14 +42,19 @@
   <h4>Hit-Points: {{dirList.hitPoints}}</h4>
   <h4>Email: {{dirList.email}}</h4>
 
-  <!-- color -->
-  <input type="text" ng-model="color" placeholder="type your favorite color">
 
   </div>
   <div>
     <input type="text" ng-model="info" placeholder="find a specific list">
+
+    <br>
+    <button ng-if='!dirList.toggle' ng-click=" dirList.toggle = true ">Show Names</button>
+    <br>
+    <button ng-if='dirList.toggle' ng-click=" dirList.toggle = false "> Hide Names</button>
+    <br>
+    
     <!-- this calls the filter declared in `ng-repeat`-->
-    <ul>
+    <ul ng-class="{'hidden' : !dirList.toggle }">
       <li ng-class="item.hitPoints > 12 ? 'under-twelve' : 'over-twelve'" ng-repeat="item in dirList.userData | filter:info">
              {{item.firstName}}
         <br> {{item.skill}}

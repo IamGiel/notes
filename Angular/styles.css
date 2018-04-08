@@ -10,3 +10,6 @@
    background-color: lightblue;
   color:white
 }
+.hidden {
+  display: none;
+}

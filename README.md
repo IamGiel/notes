@@ -48,10 +48,7 @@ Important Finds = Nice To Keep
 
 <h2>Adding Video to a page</h2>
 
-
-
- ``` //start video styles
-
+```//start video styles
 .fullscreen-bg {
 opacity: 0.5;
 position: fixed;
@@ -100,3 +97,27 @@ display: none;
 <hr>
 <h2>Adding an existing project to GitHub using the command line: <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a></h2>
 <hr><br>
+
+<h1> Angular | React | Vue | Pros-Cons</h1> By: Max S. and Vikram K.
+Angular = {
+-has modularity
+-use components with modules
+-dependency injection
+-easy to add routing and form validations
+-very popular and many websites use it
+-typescript forces developer to write better code
+- Templates are separate - this means you can have your design team create the HTML and   CSS and you can add your JS bits.
+-Since all major dependencies are courtesy of the Angular team, low risk of dependency    hell.
+}
+React = {
+  - uses jsx, where you use html elements with javascript
+  - you have to use `className` instead of `class` because of jsx
+  - Componentization is a major plus, the fact that Angular 2 moved in this direction     is telling.
+  - Multi-device. Angular, while it has Cordova, is nowhere near as versatile as React.
+  - JSX makes it difficult to separate responsibility between developer and designer.
+}
+Vue = {
+  -
+  -
+  -
+}

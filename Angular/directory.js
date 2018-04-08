@@ -1,8 +1,11 @@
 angular
   .module("directoryApp", [])
   .controller("directoryController", function() {
-
+    //variable declarations here:
     var dirList = this;
+    dirList.toggle = false;
+
+    //users
     dirList.userData = [
       {
         firstName: "Gel",
