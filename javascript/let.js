@@ -15,11 +15,8 @@ function print2(){
   for (var i = 0; i < 10; i++) {
     var element = [i];
   }
-
   console.log(element);//9 gets printed out
-
 }
-
 print2();
 
 //example 3 with let keyword
