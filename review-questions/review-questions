@@ -1,0 +1,16 @@
+1. What is a RESTful API?
+2. Whats the difference between "==" and "==="?
+3. What are the HTTP methods?
+4. What are End-points in an API requests?
+5. What is inheritance in javascript?
+6. What is the "this" key word
+7. What are the metadata and decorator in Angular? (types of decorator? types of metadata? what they do?)
+8. What are the Angular life-cycle hooks?
+9. What is typescript? How is it different from javascript?
+10. How is typescript used in Angular?
+11. How are decorators applied in Angular?
+
+
+
+Review Resources:
+metadata and decorators: https://toddmotto.com/angular-decorators
