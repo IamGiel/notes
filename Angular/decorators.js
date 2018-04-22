@@ -23,3 +23,17 @@ import { AppComponent } from './app.component';
 })
 export class AppModule {}
 
+//*********************** */
+//*********************** */
+
+// -- @Component decorator --
+// Component decorator allows you to mark a class as an Angular component 
+// and provide additional metadata that determines how the component should be processed,
+// instantiated and used at runtime.
+
+@Component({ selector: "greet", template: "Hello {{name}}!" })
+class Greet {
+  name: string = "World";
+}
+
+//
