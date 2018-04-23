@@ -48,3 +48,9 @@ for (var i = 0; i < 10; i++) {
 //Closures - can refer to outer scope functions or variables even if that outer scope has exited.
 //Important - Closure points at the value of the outer scope variable not when the closure was executed.
 //To Solve a closure problem (as in a forloop above) we can use IIFE's
+
+
+//NOTE: Adding `!` in
+// !function () {}();
+// is an IIFE equivalent to
+//(function(){})();
