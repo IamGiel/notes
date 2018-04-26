@@ -1,12 +1,12 @@
-var num = 10,
-  name = "Addy Osmani",
+var num = 10,//number type
+  name = "Addy Osmani", //string type
   obj1 = {
-    value: "first value"
+    value: "first value" //object type
   },
   obj2 = {
     value: "second value"
   },
-  obj3 = obj2;
+  obj3 = obj2; //object type
 
 function change(num, name, obj1, obj2) {
   num = num * 10;
