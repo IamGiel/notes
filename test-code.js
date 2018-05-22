@@ -1,5 +1,6 @@
 
 // //==================
+// adding 
 // $(document).ready(function () {
 //     //testing for connection to html file
 //     console.log("nice, js file is linked.");

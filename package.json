@@ -13,5 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
   }
 }
