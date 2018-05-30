@@ -98,3 +98,23 @@ display: none;
 <h2>Adding an existing project to GitHub using the command line: <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a></h2>
 <hr><br>
 
+<br><hr>
+<p>
+When you have changes on your working copy, from command line do:
+
+`git stash`
+
+This will stash your changes and clear your status report
+
+`git pull`
+
+This will pull changes from upstream branch. Make sure it says fast-forward in the report. If it doesn't, you are probably doing an unintended merge
+
+`git stash pop`
+
+This will apply stashed changes back to working copy and remove the changes from stash unless you have conflicts. In the case of conflict, they will stay in stash so you can start over if needed.
+
+if you need to see what is in your stash
+
+`git stash list`
+</p>

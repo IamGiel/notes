@@ -1,18 +1,16 @@
 {
-  "name": "testing-code",
-  "quokka.js": {
-    "babel": true
-  },
+  "name": "gel",
   "version": "1.0.0",
   "description": "",
-  "main": "test-code.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.9"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
   },
   "devDependencies": {
     "nodemon": "^1.17.4"
