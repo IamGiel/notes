@@ -82,6 +82,29 @@
 // // It will fire when each <li> is clicked
 // ul.addEventListener('click', hide, false);
 
+//  DESTRUCTURING IN ES6 
+//  source: https://gist.github.com/yang-wei/3d35e8692dbc6cc0f98d
+
+var array = [1, 2, 3, 4, 5, 6];
+// rest parameter
+var [a, b, ...c] = array;
+
+console.log(c);//3, 4, 5, 6
+console.log(a);// 1
+// console.log(h);//not defined
+
+var object = {a: "A", b: "B", c: "C", john:"JOHN"};
+var nestedObject = {a: "A", b: "B", c: "C", x: {y: "Y", z: "Z"}};
+
+var {a: A, b: B, c: C, john:JOHN} = object;
+console.log("this is value: ", A, B, C, JOHN);
+// ------ "A" "B" "C"
+
+var {a: A, b: B, c: C, x: X} = nestedObject;
+console.log(X);
+// {y: "Y", z: "Z"}
+
+
 
 
 
