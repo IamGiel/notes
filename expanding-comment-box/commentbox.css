@@ -1,0 +1,24 @@
+.comment_box {
+    /* Cosmetic */
+    margin-left: 30px;
+    margin-top: 50px;
+    border-radius: 7px;
+    border-color: #BABABA;
+    box-shadow: 1px 5px 2px #EDEDED;
+    height: 130px;
+    width: 300px;
+    /* Was 470px */
+    /* Text */
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    color: #7A7A7A;
+    padding: 10px;
+}
+
+.comment_box:focus {
+    outline: none;
+    border-color: #7AB0E6
+}
+
+​
