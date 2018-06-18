@@ -85,26 +85,58 @@
 //  DESTRUCTURING IN ES6 
 //  source: https://gist.github.com/yang-wei/3d35e8692dbc6cc0f98d
 
-var array = [1, 2, 3, 4, 5, 6];
-// rest parameter
-var [a, b, ...c] = array;
+// var array = [1, 2, 3, 4, 5, 6];
+// // rest parameter
+// var [a, b, ...c] = array;
 
-console.log(c);//3, 4, 5, 6
-console.log(a);// 1
-// console.log(h);//not defined
+// console.log(c);//3, 4, 5, 6
+// console.log(a);// 1
+// // console.log(h);//not defined
 
-var object = {a: "A", b: "B", c: "C", john:"JOHN"};
-var nestedObject = {a: "A", b: "B", c: "C", x: {y: "Y", z: "Z"}};
+// var object = {a: "A", b: "B", c: "C", john:"JOHN"};
+// var nestedObject = {a: "A", b: "B", c: "C", x: {y: "Y", z: "Z"}};
 
-var {a: A, b: B, c: C, john:JOHN} = object;
-console.log("this is value: ", A, B, C, JOHN);
-// ------ "A" "B" "C"
+// var {a: A, b: B, c: C, john:JOHN} = object;
+// console.log("this is value: ", A, B, C, JOHN);
+// // ------ "A" "B" "C"
 
-var {a: A, b: B, c: C, x: X} = nestedObject;
-console.log(X);
-// {y: "Y", z: "Z"}
+// var {a: A, b: B, c: C, x: X} = nestedObject;
+// console.log(X);
+// // {y: "Y", z: "Z"}
 
+// es6 for of loop
 
+let Jacob = {};
+let arr = [1, true, "false", Jacob, "John"];
 
+// for (let i of arr) {
+//   console.log(i);
+// }
+
+// output 
+// 1
+// 2
+// 3
+// 4
+// 5
+
+// for (let i=0;  i < arr.length; i++){
+//   console.log(i);
+// }
+// output 
+// 0
+// 1
+// 2
+// 3
+// 4
+
+// for (let i of arr) {
+//   let test = arr[i];
+//   console.log(test);
+// }
+for (let i=0;  i < arr.length; i++){
+  let test = arr[i];
+  console.log(test);
+}
 
 
