@@ -118,3 +118,8 @@ if you need to see what is in your stash
 
 `git stash list`
 </p>
+
+<hr>
+<p>To check if mongodb is running in your system - run in cmd line</p>
+<a href="https://stackoverflow.com/questions/31561098/how-to-check-if-mongo-db-is-running-on-mac"> Read Here or copy paste -> </a>
+`ps -ef | grep mongod | grep -v grep | wc -l | tr -d ' '`
