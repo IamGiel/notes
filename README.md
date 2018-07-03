@@ -126,3 +126,10 @@ if you need to see what is in your stash
 
 Check version: `mongod --version`
 
+<hr>
+<h3>Installing mysql in mac</h3>
+<a href="https://www.youtube.com/watch?v=dkrdDhAj-Zo"> Video Tutorial </a>
+<p>With sql workbench</p>
+
+
+
