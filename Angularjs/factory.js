@@ -40,3 +40,42 @@ app.factory('myFactory', function ($http, $q) {
 
     return service;
 });
+
+// add properties to the service
+app.factory('myFactory', function ($http, $q) {
+    var service = {};
+    var baseUrl = 'https://itunes.apple.com/search?term='
+    var _artist = '';
+    var _finalUrl = '';
+
+    var makeUrl = function () {
+        _artist = _artist.split(' ').join('+');
+        _finalUrl = baseUrl + _artist + '&callback=JSON_CALLBACK';
+        return _finalUrl;
+    }
+
+    service.setArtist = function (artist) { // accepts artists and set artists
+        _artist = artist;
+    }
+
+    service.getArtist = function () { // returns the artists
+        return _artist;
+    }
+
+    service.callItunes = function () { //first calls makeUrl() in order to build the URL we’ll use with our $http request.
+        makeUrl()
+        var deferred = $q.defer();
+        $http({
+            method: 'JSONP',
+            url: _finalUrl
+        }).success(function (data) {
+            deferred.resolve(data);
+        }).error(function () {
+            deferred.reject('There was an error');
+        })
+
+        return deferred.promise;
+    }
+
+    return service;
+});
