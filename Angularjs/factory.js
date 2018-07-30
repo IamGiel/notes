@@ -79,3 +79,23 @@ app.factory('myFactory', function ($http, $q) {
 
     return service;
 });
+
+// Now our factory is complete.We are now able to inject‘ myFactory’ 
+// into any controller and we’ ll then be able to 
+// call our methods that we attached to our service object(setArtist, getArtist, and callItunes).
+
+app.controller('myFactoryCtrl', function ($scope, myFactory) {
+    $scope.data = {};
+    $scope.updateArtist = function () {
+        myFactory.setArtist($scope.data.artist);
+    }
+
+    $scope.submitArtist = function () {
+        myFactory.callItunes()
+            .then(function (data) {
+                $scope.data.artistData = data;
+            }, function (data) {
+                alert(data);
+            })
+    }
+})
