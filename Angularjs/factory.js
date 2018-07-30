@@ -99,3 +99,13 @@ app.controller('myFactoryCtrl', function ($scope, myFactory) {
             })
     }
 })
+
+// In the controller above we’ re injecting in the‘ myFactory’ service.
+// We then set properties on our $scope object that are coming from data from‘ myFactory’.
+// The only tricky code above is
+// if you’ ve never dealt with promises before.
+// Because callItunes is returning a promise, we are able to use the.then() method and only set $scope.data.artistData 
+// once our promise is fulfilled with the iTunes data.You’ ll notice our controller is very‘ thin’.All of our logic 
+// and persistent data is located in our service, not in our controller.
+
+CREDIT: https: //tylermcginnis.com/angularjs-factory-vs-service-vs-provider/
