@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
 
 
     <script>
@@ -14,15 +16,25 @@
 
         example.controller('exampleController', function ($scope, $localStorage) {
             $scope.saveData = function () {
-                $localStorage.message = "Gel is saving this message cause you clicked saved!"
+                $localStorage.message = "Gel is saving this message cause you clicked saved!";
             }
-
+            $scope.loadData = function () {
+                $scope.reveal = $localStorage.message;
+            }
         });
     </script>
 
 </head>
 
-<body>
+<body ng-app="example">
+    <div ng-controller="exampleController">
+        <button ng-click="loadData()">Load Data</button>
+        <button ng-click="saveData()">Save Data</button>
+        <br/> Message: {{ reveal }}
+    </div>
+
+
+
 
 </body>
 
