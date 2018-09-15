@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adding/Changing Class</title>
+</head>
+
+<body>
+    <div id="my_id">This is a div written in black.</div>
+</body>
+
+<script>
+    var divToChange = document.getElemetById('my_id');
+
+    //to change the class we would do.
+    divToChange.className = "newclass";
+
+    //if we want to add multiple classes, we could just do
+    divToChange.className = "newclass secondclass thirldclass";
+
+    //if we want to add a class name without removing the class present before, we do:
+    divToChange.className = divToChange.className.concat(" addedwit");
+
+    //to change the background color of such an element, we would also have to do.
+    divToChange.style.background - color = "red";
+
+    //to change the color of such an element would need
+    divToChange.style.color = "white";
+
+    //Which we would agree is a bit more stressful than what angular ships with us.
+</script>
+
+</html>
