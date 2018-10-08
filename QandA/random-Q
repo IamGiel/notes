@@ -23,4 +23,11 @@ Google Searches:
     }
 
 
-2. angular css styles lost after back button
+2. angular css styles lost after back button:
+
+
+3. ERROR:
+
+“The template specified for component SidebarComponent is not a string” 
+- Make sure that templateUrl: './something.component.html' is  in ".html"
+
