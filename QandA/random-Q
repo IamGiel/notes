@@ -1,3 +1,26 @@
 Google Searches:
 
-Why components, doesnt load all css, from clicking the back button?
+1. Why angular components, doesnt load all css, from clicking the back button?
+    Do not use the back button code or onclick="window.history.go(-1);
+    instead use navigateByUrl or navigate.
+
+    Import {Router} from "@angular/router";
+
+    // inject it in the onstructor
+    constructor(private router: Router) {}
+
+
+    // then use it
+    welcomeSup() {
+        this.router.navigateByUrl('/procurement/intro').then(
+            nav => {
+                console.log('navigated success ', nav); // true if navigation is successful
+            },
+            err => {
+                console.log('errored from home page ', err); // when there's an error
+            }
+        );
+    }
+
+
+2. angular css styles lost after back button
