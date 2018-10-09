@@ -31,3 +31,8 @@ Google Searches:
 “The template specified for component SidebarComponent is not a string” 
 - Make sure that templateUrl: './something.component.html' is  in ".html"
 
+
+
+4. ng2-file-uploader for Angular 6.^ https://www.youtube.com/watch?v=NsHgvKeAEDI
+
+5. How to test if im hitting the API after a file upload.  Backend engineers provided the API URL.
