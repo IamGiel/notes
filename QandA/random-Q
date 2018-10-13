@@ -56,3 +56,19 @@ function warnUser(): void {
 8. So it implies that function, is of a type 'void'? Or it returns void?
 
 The standard typescript way how to declare type is to use colon : - this notation: name:string or func:Function... so if we want to explicitly declare returned type of a function we use the same notation. So the answer: it is the retunred value type 
+
+
+9.  How to use service in Angular?
+
+- create a model (gelsModel.ts)
+- create a service (ng g s gelService)
+- import model in service
+- create a getFunction in service (get data) eg: getLists()
+- add to component:
+- import service in component, import model as well
+- initiate a variable set it to type model eg: somevariable:gelsModel
+- inject the service
+- create function in component that calls the service eg:
+`function getData(): void {
+  this.somevariable = this.injectedservice.getLists();
+}`
