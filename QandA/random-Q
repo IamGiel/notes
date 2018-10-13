@@ -40,3 +40,19 @@ Google Searches:
 6. How to modify and angular bootstrap (ng-bootstrap) css? 
 
 https://stackoverflow.com/questions/43610229/how-modify-css-of-ng-bootstrap-carousel-using-angular-2
+
+7. What does 'void' in typescript mean? 
+
+This is just a type, as documented here:
+
+Void
+Perhaps the opposite in some ways to 'any' is 'void', the absence of having any type at all. You may commonly see this as the return type of functions that do not return a value:
+
+function warnUser(): void {
+    alert("This is my warning message");
+}
+
+
+8. So it implies that function, is of a type 'void'? Or it returns void?
+
+The standard typescript way how to declare type is to use colon : - this notation: name:string or func:Function... so if we want to explicitly declare returned type of a function we use the same notation. So the answer: it is the retunred value type 
