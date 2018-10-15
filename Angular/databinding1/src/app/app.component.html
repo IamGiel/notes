@@ -1,30 +1,9 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Bind it!</h3>
-      <app-game-controller (intervalFired)="onIntervalFired($event)"></app-game-controller>
-      <div class="row">
-        <div class="col-md-6 text-center">
-          <app-odd *ngFor="let odd of oddNUmber" [gelsOddNumber]='odd'></app-odd>
-          <!-- <p *ngFor="let odd of oddNUmber">{{odd}}</p> -->
-        </div>
-        <div class="col-md-6 text-center">
-          <app-even *ngFor="let even of evenNUmber" [gelsEvenNumber]='even'></app-even>
-          <!-- <p *ngFor="let even of evenNUmber">{{even}}</p> -->
-        </div>
-      </div>
+<router-outlet></router-outlet>
+<!-- Routed components go here -->
 
-
-      <!-- <ol>
-        <li>Create three new components: GameControl, Odd and Even</li>
-        <li>The GameControl Component should have buttons to start and stop the game</li>
-        <li>When starting the game, an event (holding a incrementing number) should get emitted each second (ref = setInterval())</li>
-        <li>The event should be listenable from outside the component</li>
-        <li>When stopping the game, no more events should get emitted (clearInterval(ref))</li>
-        <li>A new Odd component should get created for every odd number emitted, the same should happen for the Even Component (on even numbers)</li>
-        <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
-        <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
-      </ol> -->
-    </div>
-  </div>
-</div>
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="/controller" routerLinkActive="active">Controller</a> |
+  <a routerLink="/tables" routerLinkActive="active">Tables</a>
+</nav>
+<router-outlet></router-outlet>

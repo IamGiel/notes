@@ -1,15 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
+import { RouterModule, Routes } from "@angular/router";
 
-import { AppComponent } from './app.component';
-import { GameControllerComponent } from './game-controller/game-controller.component';
-import { OddComponent } from './odd/odd.component';
-import { EvenComponent } from './even/even.component';
-import { UploadListComponent } from './uploads/upload-list/upload-list.component';
-import { UploadFormComponent } from './uploads/upload-form/upload-form.component';
+import { AppComponent } from "./app.component";
+import { GameControllerComponent } from "./game-controller/game-controller.component";
+import { OddComponent } from "./odd/odd.component";
+import { EvenComponent } from "./even/even.component";
+import { UploadListComponent } from "./uploads/upload-list/upload-list.component";
+import { UploadFormComponent } from "./uploads/upload-form/upload-form.component";
+import { TablesComponent } from "./tables/tables.component";
 
+const appRoutes: Routes = [
+  { path: "controller", component: GameControllerComponent },
+  { path: "tables", component: TablesComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +23,19 @@ import { UploadFormComponent } from './uploads/upload-form/upload-form.component
     OddComponent,
     EvenComponent,
     UploadListComponent,
-    UploadFormComponent
+    UploadFormComponent,
+    TablesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
