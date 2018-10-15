@@ -72,3 +72,7 @@ The standard typescript way how to declare type is to use colon : - this notatio
 `function getData(): void {
   this.somevariable = this.injectedservice.getLists();
 }`
+
+10. How to hide scrollbar while scrolling using css
+
+https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
