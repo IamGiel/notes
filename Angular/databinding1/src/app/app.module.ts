@@ -11,6 +11,7 @@ import { EvenComponent } from "./even/even.component";
 import { UploadListComponent } from "./uploads/upload-list/upload-list.component";
 import { UploadFormComponent } from "./uploads/upload-form/upload-form.component";
 import { TablesComponent } from "./tables/tables.component";
+import { DataTableModule } from "angular-6-datatable";
 
 const appRoutes: Routes = [
   { path: "controller", component: GameControllerComponent },
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    DataTableModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
