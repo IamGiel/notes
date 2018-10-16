@@ -14,6 +14,8 @@ import { UploadFormComponent } from "./uploads/upload-form/upload-form.component
 import { TablesComponent } from "./tables/tables.component";
 import { DataTableModule } from "angular-6-datatable";
 import { NgxPaginationComponent } from "./ngx-pagination/ngx-pagination.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { FilterNgForPipe } from './filter-ng-for.pipe';
 
 const appRoutes: Routes = [
   { path: "controller", component: GameControllerComponent },
@@ -29,13 +31,15 @@ const appRoutes: Routes = [
     UploadListComponent,
     UploadFormComponent,
     TablesComponent,
-    NgxPaginationComponent
+    NgxPaginationComponent,
+    FilterNgForPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     DataTableModule,
+    NgbModule,
     NgxPaginationModule,
     RouterModule.forRoot(
       appRoutes,

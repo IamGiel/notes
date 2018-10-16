@@ -1,4 +1,37 @@
 <ul>
-  <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }"> {{item.name}} </li>
+  <li *ngFor="let item of collection | paginate: { itemsPerPage: 5, currentPage: p }"> {{item.name}}
+  </li>
 </ul>
+<br>
+<hr>
+
 <pagination-controls (pageChange)="p = $event"></pagination-controls>
+<!-- <pagination-controls (pageChange)="p = $event" maxSize="9" directionLinks="true" autoHide="true" responsive="true"
+  previousLabel="Previous" nextLabel="Next" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page"
+  screenReaderCurrentLabel="You're on page">{{p}}</pagination-controls> -->
+<hr>
+
+
+<ul *ngFor="let item of collection | paginate: { id: 'foo',
+                                                      itemsPerPage: pageSize,
+                                                      currentPage: p,
+totalItems: total }">Page
+  {{p}} of {{item.name}}</ul>
+
+
+<hr>
+
+<h4>Cutomized Pagination</h4>
+<br>
+<p>Restricted size, no rotation:</p>
+<ngb-pagination [collectionSize]="25" [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+
+<p>Restricted size with rotation:</p>
+<ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+
+<p>Restricted size with rotation and no ellipses:</p>
+<ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+
+<hr>
+
+<pre>Current page: {{page}}</pre>

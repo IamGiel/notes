@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NgbPaginationConfig } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-ngx-pagination",
@@ -8,7 +9,14 @@ import { Component, OnInit } from "@angular/core";
 export class NgxPaginationComponent implements OnInit {
   p: number = 1;
   collection: any[];
-  constructor() {}
+  page = 4;
+  pageSize = 3;
+
+  constructor(config: NgbPaginationConfig) {
+    // customize default values of paginations used by this component tree
+    config.size = "sm";
+    config.boundaryLinks = true;
+  }
   ngOnInit() {
     let data = [
       {
