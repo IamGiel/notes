@@ -10,7 +10,7 @@ export class FilterNgForPipe implements PipeTransform {
       return collections;
     }
     return collections.filter(
-      collection => collection.indexOf(filter.name) !== -1
+      collections => collections.name.indexOf(filter.) !== -1
     );
   }
 }
