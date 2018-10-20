@@ -76,3 +76,12 @@ The standard typescript way how to declare type is to use colon : - this notatio
 10. How to hide scrollbar while scrolling using css
 
 https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+
+11. Angular 6 pipe filters 
+
+https://www.youtube.com/watch?v=y8lwG8IM82k
+
+12. Data pipe filters *ngFor 
+
+https://www.youtube.com/watch?v=1TFSibbnkj0
+
