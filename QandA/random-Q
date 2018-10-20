@@ -85,3 +85,14 @@ https://www.youtube.com/watch?v=y8lwG8IM82k
 
 https://www.youtube.com/watch?v=1TFSibbnkj0
 
+13. How to get a parent element to appear above child
+
+solution z-index parent div
+https://stackoverflow.com/questions/1806421/how-to-get-a-parent-element-to-appear-above-child
+add a wrapper for parent and change z-index of this wrapper for example 10, and set z-index for child to -1:
+
+
+14. Create a button that scrolls a set of inline divs horizontally.
+add a wrapper for parent and change z-index of this wrapper for example 10, and set z-index for child to -1:
+
+
