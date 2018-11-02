@@ -37,3 +37,51 @@ searchPendingList(searchParam): Observable <HttpResponse<Request>> {
 }
     }
 }
+
+// capture search input field to query pending lists
+onSearchFieldPending($event) {
+    // console.log("this is key up on search field test event", $event.target.value);
+    let userSearchInput = $event.target.value.toLowerCase();
+    let arrayOfSearchResults;
+    let timeout;
+
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        if (userSearchInput) {
+            this.setPageOnTab2(1);
+            // alert(userSearchInput);
+            this.listCompanyService.searchPendingList(userSearchInput).subscribe(res => {
+                arrayOfSearchResults = res.body.data;
+                console.log('this is user search input field typed >>> ', arrayOfSearchResults);
+                //     for (let i = 0; i < arrayOfSearchResults.length; i++) {
+                //         supName = arrayOfSearchResults[i];
+                //         dunsNum = arrayOfSearchResults[i].providerKey.dunsNumber;
+                //     }
+                //    alert(supName + "" + dunsNum);
+                this.pendingList = arrayOfSearchResults;
+                if (this.pendingList != null) {
+                    console.log('this is line 307 ', this.pagedItemsPend);
+                    this.pagedItemsPend = this.pagedItemsPend;
+                    console.log('this is pageItemsPend >>> ', this.pagedItemsPend);
+                } else {
+                    console.log('pending list is null 311 ', this.pendingList);
+                    this.pendingList = [];
+                    // this.pagerPending.startIndex = -1;
+                    // this.pagerPending.endIndex = -1;
+                    // this.pagedItemsPend = this.pendingList.slice(this.pagerPending.startIndex, this.pagerPending.endIndex + 1);
+                    this.setPageOnTab2(1);
+                    console.log('this is pageItemsPend >>> ', this.pagedItemsPend);
+                }
+            });
+        } else if (!userSearchInput) {
+            this.setPageOnTab2(1);
+            this.listCompanyService.searchPendingList(userSearchInput).subscribe(res => {
+                arrayOfSearchResults = res.body.data;
+                console.log('this is user search input field typed >>> ', arrayOfSearchResults);
+                this.pendingList = arrayOfSearchResults;
+                this.pagedItemsPend = this.pendingList.slice(this.pagerPending.startIndex, this.pagerPending.endIndex + 1);
+                console.log('this is pageItemsPend >>> ', this.pagedItemsPend);
+            });
+        }
+    }, 500);
+}
