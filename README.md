@@ -98,6 +98,11 @@ display: none;
 <h2>Adding an existing project to GitHub using the command line: <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a></h2>
 <hr><br>
 
+<hr>to GitHub using the command line: <a href="https://help.github.com/articles/changing-a-remote-s-url/">here</a></h2>
+<hr><br>
+
+
+
 <br><hr>
 <p>
 When you have changes on your working copy, from command line do:
