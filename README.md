@@ -28,7 +28,7 @@ Important Finds = Nice To Keep
 | \d     | Numerical digit, 0, 1, 2, ... 9. Etc.   |
 | {1,2}  | one to two times.                       |
 | )      | You guessed it - Closes the group.      |
-| $      | Assert position at end of the string    |
+| \$     | Assert position at end of the string    |
 
 ![visual](https://raw.githubusercontent.com/IamGiel/notes/master/images/regex%20visual.png)
 
@@ -98,12 +98,11 @@ display: none;
 <h2>Adding an existing project to GitHub using the command line: <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a></h2>
 <hr><br>
 
-<hr>to GitHub using the command line: <a href="https://help.github.com/articles/changing-a-remote-s-url/">here</a></h2>
+<hr>Replace an existing repository <a href="https://help.github.com/articles/changing-a-remote-s-url/">here</a></h2>
 <hr><br>
 
-
-
 <br><hr>
+
 <p>
 When you have changes on your working copy, from command line do:
 
@@ -122,6 +121,7 @@ This will apply stashed changes back to working copy and remove the changes from
 if you need to see what is in your stash
 
 `git stash list`
+
 </p>
 
 <hr>
@@ -135,6 +135,3 @@ Check version: `mongod --version`
 <h3>Installing mysql in mac</h3>
 <a href="https://www.youtube.com/watch?v=dkrdDhAj-Zo"> Video Tutorial </a>
 <p>With sql workbench</p>
-
-
-
